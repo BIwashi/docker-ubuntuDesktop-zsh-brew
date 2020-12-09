@@ -1,0 +1,13 @@
+version: '3'
+services:
+  ubuntu_desktop:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: ubuntu_container_desktop
+    image: biwashi/ubuntu-desktop-zsh-brew
+    tty: true
+    volumes:
+      - ./src/:/home/new/src
+    ports:
+      - "8080:8080"
