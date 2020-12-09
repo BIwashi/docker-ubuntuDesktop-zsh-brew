@@ -145,12 +145,15 @@ RUN git clone --recursive https://github.com/BIwashi/dotfiles.git
 
 # 以降の作業ディレクトリを指定
 WORKDIR $HOME/dotfiles
+
+# dotfile setup
 RUN ./setup.sh
 RUN ./install_zprezto.sh
 
 # dotfiles用の諸々ツール
 RUN brew install exa
 RUN brew install fzf
+# キーバインド設定
 RUN $(brew --prefix)/opt/fzf/install
 
 ####################################
