@@ -1,4 +1,31 @@
-# （改）dockerでUbuntu desktopを表示する
+# dockerでUbuntu desktop環境構築（zsh + prezto + brew）
+
+## 導入
+
+```zsh
+$ ./start.sh
+```
+
+## コンテナ
+
+```zsh
+$ docker-compose build --no-cache
+$ docker-compose up -d
+
+# コンテナに入る
+$ docker-compose exec ubuntu_desktop zsh
+
+# コンテナから出る
+$ exit
+
+# コンテナを削除
+$ docker-compose down
+```
+
+
+
+
+---
 
 ## 参考
 ```zsh
